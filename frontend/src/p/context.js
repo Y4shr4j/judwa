@@ -20,6 +20,7 @@ const ContextProvider = ({ children }) => {
           console.error("Failed to fetch user details:", data.message);
         }
       } catch (error) {
+        
         console.error("Error fetching user details:", error);
       }
     };
