@@ -1,0 +1,16 @@
+{
+    "version" : 2, 
+    "name" : "yashra4j", 
+    "build" : [
+        {
+            "src" : "./index.js", 
+            "use" : "@vercel/node"
+        }
+    ], 
+    "routes" : [
+        {
+            "src" : "/(.*)", 
+            "dest" : "/"
+        }
+    ]
+}
