@@ -1,4 +1,4 @@
-const backendDomin = "https://judwa.onrender.com"
+const backendDomin = process.env.REACT_APP_BACKEND_URL;
 
 
 
