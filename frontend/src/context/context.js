@@ -1,7 +1,7 @@
 import React, { createContext, useState, useEffect } from "react";
 import SummaryApi from "../common/index"; // Adjust the path according to your project structure
 
-const Context = createContext();
+const Contexty = createContext();
 
 const ContextProvider = ({ children }) => {
   const [userDetails, setUserDetails] = useState(null);
@@ -28,10 +28,10 @@ const ContextProvider = ({ children }) => {
   }, []);
 
   return (
-    <Context.Provider value={{ userDetails, setUserDetails }}>
+    <Contexty.Provider value={{ userDetails, setUserDetails }}>
       {children}
-    </Context.Provider>
+    </Contexty.Provider>
   );
 };
 
-export { Context, ContextProvider };
+export { Contexty, ContextProvider };
