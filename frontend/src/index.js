@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { ContextProvider } from './context/context';
+import { ContextProvider } from './p/context';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider } from 'react-router-dom';
 import router from './routes';

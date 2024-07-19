@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
-import { Contexty } from '../context/context'; // Adjust the path according to your project structure
+import { Contexty } from '../p/context'; // Adjust the path according to your project structure
 import SummaryApi from '../common';
 
 const MyAccount = () => {
