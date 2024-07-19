@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
-import { Contexty } from '../p/context'; // Adjust the path according to your project structure
+import { Contexty } from '../context/context'; // Adjust the path according to your project structure
 import SummaryApi from '../common';
 
 const MyAccount = () => {
@@ -44,6 +44,7 @@ const MyAccount = () => {
                 method: SummaryApi.updateUser.method,
                 credentials: 'include',
                 headers: {
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`, // Ensure the token is sent
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({ ...userData, userId: userDetails._id }) // Ensure userId is sent
@@ -57,7 +58,7 @@ const MyAccount = () => {
                 toast.error(data.message);
             }
         } catch (error) {
-            console.error('Error updating user details:', error);
+            console.error('Error updating user details:', error.message);
             toast.error('Failed to update user details. Please try again.');
         }
     };
